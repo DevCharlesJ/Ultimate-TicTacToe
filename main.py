@@ -2,14 +2,14 @@ from os import system
 from random import choice
 from math import sqrt
 
-global grid_dim, rows, cols
-global grid_area, grid
+#global grid_dim, rows, cols
+#global grid_area, grid
 rows, cols = 0, 0 # rows, column
 grid_dim = (0,0)
 grid_area = 0
 grid = []
 
-global players
+#global players
 players = [] # 5 Player Max
 class player:
     def __init__(self,name=None, isbot=False):
@@ -130,16 +130,17 @@ def _cls():
     system("cls")
 
 ready = False
+
 max_players = 0 # == math.sqrt(grid_area)/2
 def setup():
     global rows, cols, grid_dim, grid_area
     global grid
     global winningMoves, can_diagonal
-    global rounds, players, maxplayers
+    global rounds, players, max_players
     global ready
 
     _cls()
-    print("Visual's Ultimate Tic-Tac-Toe | SETUP")
+    print("Ultimate Tic-Tac-Toe | SETUP")
 
     # Simply using returns to refresh setup info in console for each step
     print(f"\nBoard Dimensions: [{rows if rows != 0 else '?'} x {cols if cols != 0 else '?'}]")
@@ -388,7 +389,7 @@ def play():
                 break
 
 
-print("Welcome to Visual's Ultimate Tic-Tac-Toe!")
+print("Welcome to Ultimate Tic-Tac-Toe!")
 input("Press 'enter' to continue...")
 
 while not ready:
