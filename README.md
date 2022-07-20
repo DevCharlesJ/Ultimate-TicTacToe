@@ -10,11 +10,12 @@ AI Competitors ✔️
 
 ## Instructions:
 
-    1) Run 'tictactoe.py'
+     1) Run 'tictactoe.py'
     
-    2) Enjoy!
+     2) Enjoy!
 
 
+## Content:
 
 #### Quick & Easy Setup
 ![image](https://user-images.githubusercontent.com/87337676/179878414-10d58cab-4b3f-4b78-aad5-ef76edccc0c7.png)
