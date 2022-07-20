@@ -198,7 +198,6 @@ class Instance():
                 return 
             
 
-
         self.config.grid_area = (self.config.rows*self.config.cols)
         self.config.grid_dim = (self.config.rows, self.config.cols)
         self.grid = [None]*self.config.grid_area
