@@ -1,5 +1,5 @@
 from os import system
-from random import uniform,choice
+from random import choice
 from math import sqrt
 from player import Player
 
@@ -10,8 +10,6 @@ class tttConfig():
         self._can_diagonal = False # defualt is true
 
         self.rounds = 0
-
-        
         self._max_players = 0 # f(grid_area) = math.sqrt(grid_area)/2
 
     
