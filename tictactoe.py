@@ -2,12 +2,13 @@ from os import system
 from random import uniform,choice
 from math import sqrt
 from player import Player
+from pprint import pprint
 
 class tttConfig():
     def __init__(self):
         self.grid_dim = (self.rows, self.cols) = 0, 0 # rows, column
         self.grid_area = self.rows*self.cols
-        self._can_diagonal = False # defualt is true
+        self._can_diagonal = True # defualt is true
 
         self.rounds = 0
 
@@ -203,6 +204,7 @@ class Instance():
         self.grid = [None]*self.config.grid_area
 
         self.winningMoves = self.getWinningMoves()
+
         self.__ready = True
 
     def aiMove(self,bot) -> int:
@@ -302,7 +304,7 @@ class Instance():
         for plr in self.players:
             for scan in self.winningMoves:
                 read = list(map(lambda i: self.grid[i], scan)) 
-                if all(symbol is plr.symbol for symbol in read): # p1 wins
+                if all(symbol is plr.symbol for symbol in read): # plr wins
                     return plr
 
     def checkDraw(self) -> bool:
