@@ -1,5 +1,5 @@
 # Ultimate-TicTacToe
-Flexible, CLI version of classic board game "Tic-Tac-Toe" developed entirely in Python
+Flexible, text-based version of classic board game "Tic-Tac-Toe" developed entirely in Python
 
 Singleplayer ✔️
 
