@@ -296,14 +296,18 @@ class Instance():
         self._board_out(board_build)
 
 
-    def checkWinner(self) -> Player:
+    def checkWinner(self) -> Player | None:
         """Checks winning move from a player"""
 
-        for plr in self.players:
-            for scan in self.winningMoves:
-                read = list(map(lambda i: self.grid[i], scan)) 
-                if all(symbol is plr.symbol for symbol in read): # plr wins
-                    return plr
+        for scan in self.winningMoves:
+            read = list(map(lambda i: self.grid[i], scan))
+
+            if all(symbol is read[0] for symbol in read): # all elements are the same
+                # find player with symbol
+                for plr in self.players:
+                    if plr.symbol == read[0]:
+                        return plr
+                    
 
     def checkDraw(self) -> bool:
         """Checks if no moves are left"""
@@ -312,7 +316,7 @@ class Instance():
         if not moves_left: # if moves_left not empty
             return True
         
-        return False # necessary?
+        return False
 
 
     def validateMove(self, move : int = None) -> bool:
